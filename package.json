@@ -1,0 +1,38 @@
+{
+  "name": "aframe-vrm",
+  "version": "0.0.1",
+  "description": "",
+  "files": [
+    "lib",
+    "LICENSE"
+  ],
+  "main": "lib/index.module.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack && tsc --emitDeclarationOnly",
+    "example": "superstatic"
+  },
+  "keywords": [
+    "vr",
+    "vrm",
+    "aframe",
+    "components"
+  ],
+  "author": "Ryusei Yamaguchi",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/aframe": "^0.8.3",
+    "aframe": "^0.9.2",
+    "superstatic": "^6.0.4",
+    "three": "^0.103.0",
+    "ts-loader": "^6.0.0",
+    "typescript": "^3.4.5",
+    "webpack": "^4.31.0",
+    "webpack-cli": "^3.3.2",
+    "webpack-merge": "^4.2.1"
+  },
+  "dependencies": {
+    "three-vrm": "0.0.16"
+  }
+}
