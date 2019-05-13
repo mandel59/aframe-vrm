@@ -52,4 +52,4 @@ const vrmModel: Partial<VRMModelComponent> = {
     }
 }
 
-AFRAME.registerComponent('vrm-model', vrmModel) as AFRAME.ComponentConstructor<VRMModelComponent>;
+export const VRMModelComponent = AFRAME.registerComponent('vrm-model', vrmModel) as AFRAME.ComponentConstructor<VRMModelComponent>;
