@@ -29,6 +29,18 @@ Some assets are not included in this repository. To try the examples, install th
     unzip -d examples/assets/ examples/assets/Alicia_VRM.zip
     ```
 
+3. Install dependencies then build:
+
+    ```sh
+    npm install && npm run build
+    ```
+
+4. Run:
+
+    ```sh
+    npm run example
+    ```
+
 ## License
 
 MIT
