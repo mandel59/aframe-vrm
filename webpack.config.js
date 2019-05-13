@@ -1,11 +1,10 @@
-const webpackMerge = require('webpack-merge');
 const umdPackage = {
     mode: 'production',
     entry: `${__dirname}/src/mod.ts`,
     output: {
         path: `${__dirname}/lib`,
         filename: 'aframe-vrm.module.js',
-        library: 'vrm',
+        library: 'aframe-vrm',
         libraryTarget: 'umd'
     },
     module: {
@@ -20,14 +19,12 @@ const umdPackage = {
     },
     externals: {
         'aframe': 'aframe',
-        'three': 'super-three'
+        'three': 'three',
+        'three-vrm': 'three-vrm'
     },
-    performance: {
-        maxEntrypointSize: 800000,
-        maxAssetSize: 800000
-    }
+    devtool: 'source-map',
 };
-const varPackage = webpackMerge(umdPackage, {
+const varPackage = Object.assign({}, umdPackage, {
     entry: `${__dirname}/src/use.ts`,
     output: {
         path: `${__dirname}/lib`,
