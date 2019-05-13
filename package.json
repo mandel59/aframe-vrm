@@ -10,8 +10,10 @@
   "types": "lib/index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "clean": "rm -rf lib",
     "build": "webpack && tsc --emitDeclarationOnly",
-    "example": "superstatic"
+    "example": "superstatic",
+    "prepublish": "npm run clean && npm run build"
   },
   "keywords": [
     "vr",
