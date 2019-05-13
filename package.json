@@ -1,7 +1,7 @@
 {
   "name": "aframe-vrm-component",
   "version": "0.0.1",
-  "description": "",
+  "description": "An VRM component for A-Frame",
   "files": [
     "lib",
     "LICENSE"

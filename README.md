@@ -1,4 +1,6 @@
-# A-Frame VRM
+# A-Frame VRM component
+
+An VRM component for [A-Frame](https://aframe.io/).
 
 ## Feature list (TODO)
 
