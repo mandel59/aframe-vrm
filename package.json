@@ -28,7 +28,6 @@
   "devDependencies": {
     "@types/aframe": "^0.8.3",
     "aframe": "^0.9.2",
-    "superstatic": "^6.0.4",
     "three": "^0.103.0",
     "ts-loader": "^6.0.0",
     "typescript": "^3.4.5",
