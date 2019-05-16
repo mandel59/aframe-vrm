@@ -18,8 +18,10 @@ Some assets are not included in this repository. To try the examples, install th
     npm install
     ```
 
-4. Run:
+4. Start the dev server:
 
     ```sh
     npm run debug
     ```
+
+5. Open <http://localhost:8080/debug/>.
