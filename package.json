@@ -37,6 +37,6 @@
     "webpack-merge": "^4.2.1"
   },
   "dependencies": {
-    "three-vrm": "^0.0.16"
+    "three-vrm": "0.0.16"
   }
 }
