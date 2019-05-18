@@ -3,8 +3,9 @@
 // Definitions by: Paul Shannon <https://github.com/devpaul>
 //                 Roberto Ritger <https://github.com/bertoritger>
 //                 Trygve Wastvedt <https://github.com/twastvedt>
+//                 Ryusei Yamaguchi <https://github.com/mandel59>
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
-// TypeScript Version: 2.8
+// TypeScript Version: 3.0
 
 /**
  * Extended tests and examples available at https://github.com/devpaul/aframe-experiments.git
@@ -84,7 +85,7 @@ export interface Component<T extends object = any, S extends System = System> {
 }
 
 export interface ComponentConstructor<T extends object> {
-	new (el: Entity, attrValue: string, id: string): T & Component;
+	new(el: Entity, attrValue: string, id: string): T & Component;
 	prototype: T & {
 		name: string;
 		system: System;
@@ -200,7 +201,7 @@ export interface Geometry<T = any> {
 }
 
 export interface GeometryConstructor<T extends object = object> {
-	new (): T & Geometry;
+	new(): T & Geometry;
 }
 
 export interface GeometryDescriptor<T extends Geometry = Geometry> {
@@ -254,7 +255,7 @@ export interface Scene extends Entity {
 	addEventListener(type: SceneEvents, listener: EventListener, useCapture?: boolean): void;
 }
 
-export type Schema<T extends object = object> = SinglePropertySchema<T> | MultiPropertySchema<T>;
+export type Schema<T = any> = T extends object ? MultiPropertySchema<T> : SinglePropertySchema<T>;
 
 export interface SchemaUtils {
 	isSingleProperty(schema: Schema): boolean;
@@ -275,7 +276,7 @@ export interface Shader {
 }
 
 export interface ShaderConstructor<T extends object> {
-	new (): T;
+	new(): T;
 }
 
 export interface ShaderDescriptor<T extends Shader = Shader> {
@@ -300,7 +301,7 @@ export interface System<T extends object = any> {
 }
 
 export interface SystemConstructor<T extends object = object> {
-	new (scene: Scene): T & System;
+	new(scene: Scene): T & System;
 }
 
 export interface Utils {
