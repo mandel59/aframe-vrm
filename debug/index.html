@@ -13,14 +13,22 @@
         <a-assets>
             <a-asset-item id="Alicia" src="assets/Alicia/VRM/AliciaSolid.vrm" response-type="arraybuffer">
             </a-asset-item>
+            <a-asset-item id="Shibu" src="assets/Shibu/shibu_sendagaya.vrm" response-type="arraybuffer">
+            </a-asset-item>
+            <a-mixin id="MouseBlink"
+            animation__closeeyes="property: vrm-model.blend-shape-blink; to: 1; dur: 50;
+            startEvents: mousedown; easing: easeOutQuad"
+            animation__openeyes="property: vrm-model.blend-shape-blink; to: 0; dur: 100;
+            startEvents: mouseup; easing: easeOutQuad"></a-mixin>
         </a-assets>
         <a-box position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9"></a-box>
         <a-sphere position="0 1.25 -5" radius="1.25" color="#EF2D5E"></a-sphere>
         <a-cylinder position="1 0.75 -3" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder>
         <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
         <a-sky color="#ECECEC"></a-sky>
-        <a-entity vrm-model="src: #Alicia" position="0 0 -2" rotation="0 180 0"></a-entity>
-        <a-camera position="0 1.28 -1.5"></a-camera>
+        <a-entity vrm-model="src: #Alicia" position="-1 0 -2" rotation="0 200 0" mixin="MouseBlink"></a-entity>
+        <a-entity vrm-model="src: #Shibu" position="1 0 -2" rotation="0 160 0" mixin="MouseBlink"></a-entity>
+        <a-camera position="0 1.28 0" cursor="rayOrigin: mouse"></a-camera>
         <a-light position="-0.5 1 1" intensity="1.1"></a-light>
         <a-light type="ambient" intensity="0.73"></a-light>
     </a-scene>
