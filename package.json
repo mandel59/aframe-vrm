@@ -13,6 +13,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "clean": "rm -rf lib",
     "debug": "webpack-dev-server --config webpack.config.debug.js",
+    "debug-public": "webpack-dev-server --config webpack.config.debug-public.js",
     "build": "webpack && tsc --emitDeclarationOnly",
     "example": "superstatic",
     "prepublish": "npm run clean && npm run build"
